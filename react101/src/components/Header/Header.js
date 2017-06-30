@@ -10,13 +10,13 @@ import './Header.css';
 export class Header extends Component {
   render() {
     return (
-      <div className="row">
-        <div className="col-md-12">
-          <header>
-          <h1>{this.props.title}</h1>
-          </header>
+        <div className="row">
+          <div className="col-md-12">
+            <header>
+            <h1>{this.props.title}</h1>
+            </header>
+          </div>
         </div>
-      </div>
     );
   }
 }
