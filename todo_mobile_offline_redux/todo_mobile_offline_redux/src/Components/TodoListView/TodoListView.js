@@ -20,8 +20,9 @@ export class TodoListView extends Component { // eslint-disable-line react/prefe
   }
 
   markCheckBox = (event) => {
-    var checkStatus = event.target.checked;
-    console.log(checkStatus);
+    if(event.target.checked) {
+      this.props.completeTask(this.props.todo);
+    }
 
   }
 
@@ -39,6 +40,13 @@ export class TodoListView extends Component { // eslint-disable-line react/prefe
   }
 }
 
+// Declare function to care of state
+const mapStateToProps = (state) => {
+  return {
+    todos: state.todos
+  }
+}
+
 // Declare function to take care of the Actions
 const mapDispatchToProps = (dispatch) => {
   return {
@@ -46,4 +54,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(mapDispatchToProps)(TodoListView);
+export default connect(mapStateToProps, mapDispatchToProps)(TodoListView);

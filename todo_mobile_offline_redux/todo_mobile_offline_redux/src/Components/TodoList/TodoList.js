@@ -30,10 +30,6 @@ export class TodoList extends Component { // eslint-disable-line react/prefer-st
     })
   }
 
-  markCheckBox = (event) => {
-
-  }
-
   render() {
 
     const todoRows = this.renderTodo();
@@ -50,6 +46,6 @@ export class TodoList extends Component { // eslint-disable-line react/prefer-st
 
 export default connect(
     (state) => {
-      return state;
+    return state;
     }
 )(TodoList);

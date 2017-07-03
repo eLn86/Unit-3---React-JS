@@ -20,11 +20,11 @@ const todos = (state = [], action) => {  // state = [] sets the initial state an
         break;
       case 'TOGGLE_TASKSTATUS':
         return [
-        ...state,
-        {
-          completed: true
-        }
-      ]
+          ...state,
+          {
+            completed: true
+          }
+        ]
         break;
     default:
       return state    // Return the empty array state if there is no action

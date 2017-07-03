@@ -25,7 +25,7 @@ export class Create extends Component { // eslint-disable-line react/prefer-stat
   }
 
   onClick = (event) => {
-    this.props.createTodo(this.state.text)
+    this.props.createTodo(this.state.text);
 
     this.setState({
       text: ''

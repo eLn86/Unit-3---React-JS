@@ -17,7 +17,7 @@ export const addTodos = (todos) => {
   }
 }
 
-// Define function to return the task that was checked/unchecked
+// Define function to return the task that was checked
 export const toggleTodo = (task) => {
   return {
     type: 'TOGGLE_TASKSTATUS',
