@@ -1,0 +1,9 @@
+.taskNameHeader {
+  display: inline;
+  margin-right: 10px;
+}
+
+.taskCheckBox {
+  width: 20px;
+  height: 20px;
+}

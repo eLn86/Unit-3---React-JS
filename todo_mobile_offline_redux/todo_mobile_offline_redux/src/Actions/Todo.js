@@ -8,3 +8,19 @@ export const addTodo = (text) => {
     text // returns the value of passed in text automatically
   }
 }
+
+// Define function to return the whole Todos array
+export const addTodos = (todos) => {
+  return {
+    type: 'ADD_TODOS',
+    todos
+  }
+}
+
+// Define function to return the task that was checked/unchecked
+export const toggleTodo = (task) => {
+  return {
+    type: 'TOGGLE_TASKSTATUS',
+    task
+  }
+}

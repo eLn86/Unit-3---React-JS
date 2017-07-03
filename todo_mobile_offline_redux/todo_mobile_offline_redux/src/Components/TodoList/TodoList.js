@@ -1,7 +1,11 @@
 import React, { Component, PropTypes } from 'react';
+import TodoListView from '../TodoListView/TodoListView'
 
 // Import Redux connection
 import {connect} from 'react-redux';
+
+// Import static files
+import './TodoList.css';
 
 /**
  * TodoList
@@ -21,9 +25,13 @@ export class TodoList extends Component { // eslint-disable-line react/prefer-st
     }
     return todos.map((todo) => {
       return (
-        <div>{todo.text}</div>
+        <TodoListView todo={todo}/>
       )
     })
+  }
+
+  markCheckBox = (event) => {
+
   }
 
   render() {

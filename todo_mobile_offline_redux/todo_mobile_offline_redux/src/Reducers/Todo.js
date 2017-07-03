@@ -15,6 +15,17 @@ const todos = (state = [], action) => {  // state = [] sets the initial state an
         }
       ]
       break;
+      case 'ADD_TODOS':
+        return action.todos
+        break;
+      case 'TOGGLE_TASKSTATUS':
+        return [
+        ...state,
+        {
+          completed: true
+        }
+      ]
+        break;
     default:
       return state    // Return the empty array state if there is no action
   }

@@ -25,8 +25,7 @@ export class Create extends Component { // eslint-disable-line react/prefer-stat
   }
 
   onClick = (event) => {
-    const {dispatch} = this.props;
-    dispatch(addTodo(this.state.text));
+    this.props.createTodo(this.state.text)
 
     this.setState({
       text: ''
@@ -49,5 +48,19 @@ export class Create extends Component { // eslint-disable-line react/prefer-stat
   }
 }
 
+// Declare function to care of state
+const mapStateToProps = (state) => {
+  return {
+    todos: state.todos
+  }
+}
+
+// Declare function to take care of the Actions
+const mapDispatchToProps = (dispatch) => {
+  return {
+    createTodo: (text) => {dispatch(addTodo(text));}
+  }
+}
+
 // Whenever we create a component, we call the connect function from Redux to create the Create compoenent, thus the Create component will have all the functionality of Redux/Reducer/Action/Store
-export default connect()(Create);
+export default connect(mapStateToProps, mapDispatchToProps)(Create);
